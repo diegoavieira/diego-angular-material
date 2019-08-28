@@ -1,0 +1,21 @@
+{
+  "name": "@dam/components",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  },
+  "main": "bundles/dam-components.umd.js",
+  "module": "fesm5/dam-components.js",
+  "es2015": "fesm2015/dam-components.js",
+  "esm5": "esm5/dam-components.js",
+  "esm2015": "esm2015/dam-components.js",
+  "fesm5": "fesm5/dam-components.js",
+  "fesm2015": "fesm2015/dam-components.js",
+  "typings": "dam-components.d.ts",
+  "metadata": "dam-components.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

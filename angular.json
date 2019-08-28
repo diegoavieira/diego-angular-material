@@ -12,7 +12,7 @@
       },
       "root": "projects/demo",
       "sourceRoot": "projects/demo/src",
-      "prefix": "app",
+      "prefix": "demo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -121,6 +121,45 @@
             "production": {
               "devServerTarget": "demo:serve:production"
             }
+          }
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "projects/dam/components",
+      "sourceRoot": "projects/dam/components/src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/dam/components/tsconfig.lib.json",
+            "project": "projects/dam/components/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dam/components/src/test.ts",
+            "tsConfig": "projects/dam/components/tsconfig.spec.json",
+            "karmaConfig": "projects/dam/components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dam/components/tsconfig.lib.json",
+              "projects/dam/components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
