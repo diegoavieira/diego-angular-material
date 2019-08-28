@@ -1,5 +1,5 @@
 {
-  "name": "diego-angular-material",
+  "name": "@dam/material",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
